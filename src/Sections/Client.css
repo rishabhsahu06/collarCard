@@ -1,0 +1,43 @@
+.h2-client{
+    color: rgba(0, 0, 0, 0.1);
+    font-family: "Open Sans", Sans-serif;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 60px;
+   
+}
+.h1-client{
+    color: #0066ff;
+    font-family: "Open Sans", Sans-serif;
+    font-size: 55px;
+    text-align: center;
+    margin-top: -40px;
+}
+.button-client-container button{
+    padding: 5px;
+    background-color: #0066ff;
+    color: white;
+    
+    font-size: 15px;
+}
+.button-client-container ul{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+.client-img-container img{
+    width:260px;
+}
+.client-img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+}

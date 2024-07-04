@@ -1,0 +1,100 @@
+body {
+    font-family: "Open Sans", sans-serif;
+   
+}
+
+.patent-container {
+    padding: 20px;
+}
+
+.patent-container h2 {
+    text-align: left;
+    margin-left: 230px;
+    color: rgba(0, 0, 0, 0.1);
+    font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    margin-top: 120px;
+}
+
+.patent-container h1 {
+    color: #0066ff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 56px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-align: left;
+    margin-left: 230px;
+    margin-top: -30px; /* Adjusted margin for better spacing */
+}
+.patent-card-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items at the start */
+  padding: 10px; /* Optional: Add padding for better spacing */
+  box-sizing: border-box; /* Ensure padding is included in the total width */
+  margin-left: 210px;
+}
+.patent-left-card{
+  width: 50%;
+}
+  .patent-right-card{
+    width: 50%;
+    margin-right: 500px;
+  }
+.patent-right-card li{
+     display: flex;
+     align-items: center;
+     margin: 10px;
+     justify-content: start;
+     margin: 5px;
+     font-size: 15px;
+    
+}
+  
+.patent-left-card {
+  width: 50%;
+  box-sizing: border-box; 
+  padding: 10px; 
+}
+
+.patent-right-card {
+  width: 50%;
+  box-sizing: border-box; 
+  padding: 10px; 
+}
+
+.patent-right-card li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0; 
+  justify-content: flex-start; 
+  font-size: 15px;
+}
+
+
+
+.h1-trademark {
+  color: black;
+  font-weight: bold;
+  font-size: 23px;
+}
+.trademark-container{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  gap: 240px;
+  margin-top:-10px;
+  
+}
+.trademark-right-card{
+  font-weight: bold;
+  color: black;
+  letter-spacing: 0.5px;
+  margin-right: 220px;
+  
+}
+.trademark-left-card{
+  margin-left: 220px;
+}

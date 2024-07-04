@@ -1,0 +1,120 @@
+.head h2 {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.1);
+  font-family: "Open Sans", Sans-serif;
+  font-size: 69px;
+  font-weight: 300;
+}
+
+.head h1 {
+  color: #0066ff;
+  font-family: "Open Sans", Sans-serif;
+  font-size: 56px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin-top: -60px;
+}
+
+.para-about p {
+  text-align: center;
+  color: #000000;
+  font-family: "Work Sans", Sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 25px;
+  letter-spacing: 0.1px;
+}
+
+.about-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+li {
+  text-align: start;
+  color: #000000;
+  font-family: "Work Sans", Sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 25px;
+  letter-spacing: 0.2px;
+}
+
+.about-card ul {
+  margin-top: 50px;
+}
+.ordering {
+  margin-top: 50px;
+}
+.ordering-card {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  flex: 1 1 300px;
+  max-width: 500px;
+  text-align: center;
+  height: 260px;
+}
+
+.ordering-card img {
+  width: 70px;
+  margin-top: -40px;
+  margin-left: 140px;
+}
+.ordering-card p {
+  text-align: center;
+  margin-top: 10px;
+  letter-spacing: 0.1px;
+  font-size: 17px;
+  color: #333;
+}
+.card-one li{
+  text-align: start;
+  align-items: center;
+  display: flex;
+  margin: 10px;
+  padding: 2px;
+  letter-spacing: 0.2px;
+}
+.card-one i{
+  margin: 10px;
+}
+.card-two li{
+  text-align: start;
+  align-items: center;
+  display: flex;
+  margin: 10px;
+  padding: 2px;
+  letter-spacing: 0.2px;
+}
+.card-two i{
+  margin: 10px;
+}
+
+.ordering-card-container {
+  /* display: flex;
+    justify-content: space-around;
+    align-items: center; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 20px;
+  margin-left: 130px;
+}
+
+.compare-container {
+  width: 100%;
+  background-color:#F6F6F6;
+ 
+  height: 520px;
+  transform: skew(-10deg, -6deg);
+  margin-top: 120px;
+  overflow: hidden; 
+}
