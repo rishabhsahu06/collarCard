@@ -1,43 +1,138 @@
-.h2-client{
+.h2-client {
     color: rgba(0, 0, 0, 0.1);
     font-family: "Open Sans", Sans-serif;
     font-size: 40px;
     text-align: center;
     margin-top: 60px;
-   
-}
-.h1-client{
+  }
+  
+  .h1-client {
     color: #0066ff;
     font-family: "Open Sans", Sans-serif;
     font-size: 55px;
     text-align: center;
     margin-top: -40px;
-}
-.button-client-container button{
-    padding: 5px;
+  }
+  
+  .button-client-container button {
+    padding: 8px;
     background-color: #0066ff;
     color: white;
-    
     font-size: 15px;
-}
-.button-client-container ul{
-    display: flex;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
 
+  }
+  
+  .button-client-container button:hover {
+    background-color: #0052cc;
+  }
+  
+  .button-client-container ul {
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-
-}
-.client-img-container img{
-    width:260px;
-}
-.client-img-container{
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .client-img-container img {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  
+  .client-img-container img:hover {
+    transform: scale(1.05);
+  }
+  
+  .client-img-container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    
     flex-wrap: wrap;
     width: 90%;
     margin: 0 auto;
-}
+  }
+
+  
+  @media (max-width: 768px) {
+    .h2-client {
+      font-size: 30px;
+      margin-top: 40px;
+    }
+  
+    .h1-client {
+      font-size: 45px;
+      margin-top: -30px;
+    }
+  
+    .button-client-container button {
+      font-size: 14px;
+      padding: 4px;
+    }
+  
+    .client-img-container {
+      gap: 15px;
+    }
+  }
+  
+
+  @media (max-width: 576px) {
+    .h2-client {
+      font-size: 25px;
+      margin-top: 30px;
+    }
+  
+    .h1-client {
+      font-size: 35px;
+      margin-top: -20px;
+    }
+  
+    .button-client-container button {
+      font-size: 13px;
+      padding: 3px;
+    }
+  
+    .client-img-container {
+      gap: 10px;
+    }
+  
+    .client-img-container img {
+      max-width: 200px;
+    }
+  }
+  
+
+  @media (max-width: 400px) {
+    .h2-client {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+  
+    .h1-client {
+      font-size: 30px;
+      margin-top: -10px;
+    }
+  
+    .button-client-container button {
+      font-size: 12px;
+      padding: 2px;
+    }
+  
+    .client-img-container {
+      gap: 5px;
+    }
+  
+    .client-img-container img {
+      max-width: 150px;
+    }
+  }
+  

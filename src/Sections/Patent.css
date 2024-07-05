@@ -1,100 +1,234 @@
+/* 
 body {
-    font-family: "Open Sans", sans-serif;
-   
+  font-family: "Open Sans", sans-serif;
 }
-
 .patent-container {
-    padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 120px;
 }
 
+
+
+.h1-patent {
+  color: #0066ff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-top: -25px;
+  font-size: 50px;
+}
 .patent-container h2 {
-    text-align: left;
-    margin-left: 230px;
-    color: rgba(0, 0, 0, 0.1);
-    font-family: "Open Sans", sans-serif;
-    font-size: 30px;
-    font-weight: 300;
-    margin-top: 120px;
+  color: rgba(0, 0, 0, 0.1);
+  font-family: "Open Sans", Sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  margin-top: 40px;
 }
+.h1-trademark {
+  color: black;
+  font-weight: bold;
+  font-size: 23px;
+  text-align: start;
+  margin-top: 20px;
+} */
 
-.patent-container h1 {
-    color: #0066ff;
-    font-family: "Open Sans", sans-serif;
-    font-size: 56px;
-    font-weight: 400;
-    letter-spacing: 0.5px;
-    text-align: left;
-    margin-left: 230px;
-    margin-top: -30px; /* Adjusted margin for better spacing */
-}
-.patent-card-container {
-  width: 100%;
+/* .patent-card-container{
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: flex-start; /* Align items at the start */
-  padding: 10px; /* Optional: Add padding for better spacing */
-  box-sizing: border-box; /* Ensure padding is included in the total width */
-  margin-left: 210px;
+gap: 20px;
+
+ 
 }
 .patent-left-card{
-  width: 50%;
-}
-  .patent-right-card{
-    width: 50%;
-    margin-right: 500px;
+   
   }
-.patent-right-card li{
-     display: flex;
-     align-items: center;
-     margin: 10px;
-     justify-content: start;
-     margin: 5px;
-     font-size: 15px;
-    
-}
-  
-.patent-left-card {
-  width: 50%;
-  box-sizing: border-box; 
-  padding: 10px; 
+
+  .patent-right-card{
+
+  } */
+
+/* .patent-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
 }
 
+.patent-left-card,
 .patent-right-card {
-  width: 50%;
-  box-sizing: border-box; 
-  padding: 10px; 
+  flex: 1;
+  min-width: 300px;
+  max-width: 45%;
 }
 
 .patent-right-card li {
   display: flex;
   align-items: center;
-  margin: 10px 0; 
-  justify-content: flex-start; 
+  margin-top: 10px; 
   font-size: 15px;
+  font-weight: 300;
 }
 
+.patent-left-card p {
+  font-size: 18px;
+}
+.patent-right-card p {
+  font-size: 18px;
+  font-weight: 300;
+}
+.trademark-container{
+  display: flex;
+  justify-content: space-around;
+  
+  
+ 
+}
 
+.trademark-right-card p{
+  color: black;
+  font-weight: bold;
+ 
+  
+  
+}.trademark-left-card p{
+  color: black;
+ margin: 0 auto;
+ text-align: start;
+ margin-top: 10px;
+ margin-right: 380px;
+ font-size: 17px;
+  
+} */
+
+
+
+
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.patent-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 120px;
+}
+
+.h1-patent {
+  color: #0066ff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-top: -25px;
+  font-size: 50px;
+}
+
+.patent-container h2 {
+  color: rgba(0, 0, 0, 0.1);
+  font-family: "Open Sans", Sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  margin-top: 40px;
+}
 
 .h1-trademark {
   color: black;
   font-weight: bold;
   font-size: 23px;
+  text-align: start;
+  margin-top: 20px;
 }
-.trademark-container{
+
+.patent-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+}
+
+.patent-left-card,
+.patent-right-card {
+  flex: 1;
+  min-width: 300px;
+  max-width: 45%;
+}
+
+.patent-right-card li {
   display: flex;
   align-items: center;
-  justify-content:center;
-  gap: 240px;
-  margin-top:-10px;
-  
+  margin-top: 10px; /* Adjust margin for list items */
+  font-size: 15px;
+  font-weight: 300;
 }
-.trademark-right-card{
-  font-weight: bold;
+
+.patent-left-card p {
+  font-size: 18px;
+
+}
+
+.patent-right-card p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.trademark-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.trademark-left-card p {
   color: black;
-  letter-spacing: 0.5px;
-  margin-right: 220px;
-  
+  font-size: 17px;
+  text-align: start;
+  margin: 10px auto 10px 0;
 }
-.trademark-left-card{
-  margin-left: 220px;
+
+.trademark-right-card p {
+  color: black;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .patent-left-card,
+  .patent-right-card {
+    max-width: 100%;
+  }
+
+  .trademark-left-card p {
+    text-align: center;
+    margin-right: 0;
+  }
+  
+  .trademark-right-card p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .h1-patent {
+    font-size: 36px;
+  }
+
+  .h1-trademark {
+    font-size: 18px;
+  }
+
+  .patent-container h2 {
+    font-size: 30px;
+  }
+
+  .patent-left-card p,
+  .patent-right-card p {
+    font-size: 16px;
+  }
 }

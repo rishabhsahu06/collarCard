@@ -24,6 +24,7 @@ function App() {
           <Route path="/faq" element={<FAQComponent />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+
         <About/>
         <Patent/>
         <FAQComponent/>
