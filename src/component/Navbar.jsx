@@ -8,7 +8,7 @@ function Navbar() {
       <nav className="bg-white border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-around mx-auto p-4">
           <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src={logo} className="h-8" alt="Logo" />
+            <img src={logo} className="w-[190px] h-[60px]" alt="Logo" />
           </Link>
           <button
             data-collapse-toggle="navbar-default"

@@ -1,14 +1,15 @@
 import React from "react";
 import "./Section1.css";
-import video from "../assets/card.mp4";
+import Video from "../component/Video";
 
 function Section1() {
   return (
     <>
       <div className="container">
-      <video className="video-bar" controls autoplay muted>
+      {/* <video className="video-bar" controls autoplay muted>
   <source src={video} type="video/mp4" />
-</video>
+</video> */}
+<Video/>
 
         <div className="card">
           <h2 className="h2-collar">collarcard</h2>
