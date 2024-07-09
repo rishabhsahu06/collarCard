@@ -20,22 +20,22 @@ function CollarCard() {
 
       <ul className="menu-list cursor-pointer">
       <li>
-        <Link to="home" smooth={true} duration={500}>Home</Link>
+        <Link to="home" smooth={true} duration={600}>Home</Link>
       </li>
       <li>
-        <Link to="about" smooth={true} duration={500}>About us</Link>
+        <Link to="about" smooth={true} duration={600}>About us</Link>
       </li>
       <li>
-        <Link to="clients" smooth={true} duration={500}>Clients</Link>
+        <Link to="clients" smooth={true} duration={600}>Clients</Link>
       </li>
       <li>
-        <Link to="patents" smooth={true} duration={500}>Patents</Link>
+        <Link to="patents" smooth={true} duration={600}>Patents</Link>
       </li>
       <li>
-        <Link to="faq" smooth={true} duration={500}>FAQs</Link>
+        <Link to="faq" smooth={true} duration={600}>FAQs</Link>
       </li>
       <li>
-        <Link to="contact" smooth={true} duration={500}>Contact</Link>
+        <Link to="contact" smooth={true} duration={600}>Contact</Link>
       </li>
     </ul>
     </div>

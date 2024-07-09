@@ -105,32 +105,3 @@ export default Navbar;
 
 
 
-// import React from 'react';
-// import { Link } from 'react-scroll';
-
-// const Navbar = () => {
-//   return (
-//     <ul className='menu-list'>
-//       <li>
-//         <Link to="home" smooth={true} duration={500}>Home</Link>
-//       </li>
-//       <li>
-//         <Link to="about" smooth={true} duration={500}>About us</Link>
-//       </li>
-//       <li>
-//         <Link to="clients" smooth={true} duration={500}>Clients</Link>
-//       </li>
-//       <li>
-//         <Link to="parents" smooth={true} duration={500}>Parents</Link>
-//       </li>
-//       <li>
-//         <Link to="faqs" smooth={true} duration={500}>FAQs</Link>
-//       </li>
-//       <li>
-//         <Link to="contact" smooth={true} duration={500}>Contact</Link>
-//       </li>
-//     </ul>
-//   );
-// };
-
-// export default Navbar;

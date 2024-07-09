@@ -164,7 +164,7 @@ body {
 .patent-right-card li {
   display: flex;
   align-items: center;
-  margin-top: 10px; /* Adjust margin for list items */
+  margin-top: 10px; 
   font-size: 15px;
   font-weight: 300;
 }
