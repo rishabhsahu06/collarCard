@@ -3,7 +3,7 @@ import "./Patent.css";
 
 function Patent() {
   return (
-    <div className="patent-container">
+    <div className="patent-container patents">
       <h2>Trademarks & Copywrites</h2>
       <h1 className="h1-patent">Patents</h1>
 

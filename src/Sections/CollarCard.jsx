@@ -1,35 +1,45 @@
-import React from 'react'
-import logo from "../assets/logo.png"
-import "./CollarCard.css"
+import React from 'react';
+import logo from '../assets/logo.png';
+import './CollarCard.css';
+import { Link } from 'react-scroll';
 
 function CollarCard() {
   return (
-    <>
-   <div className="collar-card-img">
-   <img src={logo} alt="logo" />
-   </div>
+    <div className="collar-card-container">
+      <div className="collar-card-img">
+        <img src={logo} alt="logo" />
+      </div>
 
-<div className="phone-card">
-<ul>
-    <li><i class="fa-solid fa-square-phone"></i>|</li>
-    <li>(310)472- <br /> 5476 |</li>
-    <li><i class="fa-solid fa-envelope-open-text"></i> sales@collarcard.com</li>
-</ul>
-</div>
+      <div className="phone-card">
+        <ul>
+          <li><i className="fa-solid fa-square-phone"></i></li>
+          <li className='li-border'>(310) 472- <br /> 5476</li>
+          <li><i className="fa-solid fa-envelope-open-text"></i>&nbsp;sales@collarcard.com</li>
+        </ul>
+      </div>
 
-
-    <ul className='collar-card-container'>
-        <li>Home</li>
-        <li>About us</li>
-        <li>Clients</li>
-        <li>Parents</li>
-        <li>FAQs</li>
-        <li>Contact</li>
+      <ul className="menu-list cursor-pointer">
+      <li>
+        <Link to="home" smooth={true} duration={500}>Home</Link>
+      </li>
+      <li>
+        <Link to="about" smooth={true} duration={500}>About us</Link>
+      </li>
+      <li>
+        <Link to="clients" smooth={true} duration={500}>Clients</Link>
+      </li>
+      <li>
+        <Link to="patents" smooth={true} duration={500}>Patents</Link>
+      </li>
+      <li>
+        <Link to="faq" smooth={true} duration={500}>FAQs</Link>
+      </li>
+      <li>
+        <Link to="contact" smooth={true} duration={500}>Contact</Link>
+      </li>
     </ul>
-
-
-    </>
-  )
+    </div>
+  );
 }
 
-export default CollarCard
+export default CollarCard;

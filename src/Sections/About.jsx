@@ -7,7 +7,8 @@ import back from "../assets/back.png"
 
 function About() {
   return (
-    <>
+    < >
+    <div id="about">
       <div className="about-container">
         <div className="head">
           <h2>Know who we are</h2>
@@ -121,15 +122,12 @@ function About() {
         </div>
       </div>
 
-      <div className="compare-container">
-        <div className="compare-img">
-          <img src={back} alt="" />
-        </div>
-      </div>
 
+
+{/* compare-container */}
 
       
-
+</div>
       
     </>
   );

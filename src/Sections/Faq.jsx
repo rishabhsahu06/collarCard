@@ -146,7 +146,7 @@ const FAQComponent = () => {
   return (
 
 
-    <div className="faq-container">
+    <div className="faq-container faq">
       <h2>FAQs</h2>
       <h1>Frequently Asked Questions</h1>
       <div className="faq-content">

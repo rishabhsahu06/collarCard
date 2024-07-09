@@ -1,7 +1,7 @@
 .footer-container {
     width: 100%;
     height: auto;
-    background-color: #0E5BCF;
+    background-color: #0e5bcf;
     padding: 20px 0; 
 }
 
@@ -9,4 +9,8 @@
     color: white;
     text-align: center;
     margin: 0; 
+    font-size: 14px;
+    font-family: 'Open Sans", Sans-serif';
+    letter-spacing: 0.4px;
+    line-height: 22px
 }

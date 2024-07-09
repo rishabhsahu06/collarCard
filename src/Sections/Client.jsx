@@ -75,7 +75,7 @@ function handleCategoryChange(category){
       : clients.filter((client) => client.category === selectedCategory);
 
   return (
-    <>
+    <div id="clients">
       <h2 className="h2-client">Works</h2>
       <h1 className="h1-client">Our Clients</h1>
       <div className="button-client-container">
@@ -102,7 +102,7 @@ function handleCategoryChange(category){
           <img key={index} src={client.src} alt="" />
         ))}
       </div>
-    </>
+    </div>
   );
 }
 

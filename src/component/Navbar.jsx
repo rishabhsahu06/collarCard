@@ -1,15 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import logo from "../assets/logo.png";
+import { Link as RouterLink } from 'react-router-dom';
+import { Link } from 'react-scroll';
+import logo from '../assets/logo.png';
 
 function Navbar() {
   return (
     <>
       <nav className="bg-white border-gray-200 dark:bg-gray-900">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-around mx-auto p-4">
-          <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-around mx-auto p-4 ">
+          <RouterLink to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
             <img src={logo} className="w-[190px] h-[60px]" alt="Logo" />
-          </Link>
+          </RouterLink>
           <button
             data-collapse-toggle="navbar-default"
             type="button"
@@ -31,22 +32,65 @@ function Navbar() {
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
-                <Link to="/" className="block py-2 px-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:text-blue-900 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">HOME</Link>
+                <Link
+                  to="home"
+                  smooth={true}
+                  duration={600}
+                  className=" cursor-pointer block py-2 px-3 font-bold text-white bg-blue-700 rounded md:bg-transparent md:text-blue-900 md:p-0 dark:text-white md:dark:text-blue-500"
+                  aria-current="page"
+                >
+                  HOME
+                </Link>
               </li>
               <li>
-                <Link to="/about" className="block py-2 px-3 font-bold text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">ABOUT US</Link>
+                <Link
+                  to="about"
+                  smooth={true}
+                  duration={600}
+                  className="cursor-pointer block py-2 px-3 font-bold text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >
+                  ABOUT US
+                </Link>
               </li>
               <li>
-                <Link to="/clients" className="block py-2 px-3 font-bold text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">CLIENTS</Link>
+                <Link
+                  to="clients"
+                  smooth={true}
+                  duration={600}
+                  className="cursor-pointer block py-2 px-3 font-bold text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >
+                  CLIENTS
+                </Link>
               </li>
               <li>
-                <Link to="/patents" className="block py-2 px-3 font-bold text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">PATENTS</Link>
+                <Link
+                  to="patents"
+                  smooth={true}
+                  duration={600}
+                  className="cursor-pointer block py-2 px-3 font-bold text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >
+                  PATENTS
+                </Link>
               </li>
               <li>
-                <Link to="/faq" className="block py-2 px-3 font-bold text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">FAQ</Link>
+                <Link
+                  to="faq"
+                  smooth={true}
+                  duration={600}
+                  className="cursor-pointer block py-2 px-3 font-bold text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >
+                  FAQ
+                </Link>
               </li>
               <li>
-                <Link to="/contact" className="block py-2 px-3 font-bold text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">CONTACT US</Link>
+                <Link
+                  to="contact"
+                  smooth={true}
+                  duration={600}
+                  className="cursor-pointer block py-2 px-3 font-bold text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >
+                  CONTACT US
+                </Link>
               </li>
             </ul>
           </div>
@@ -58,3 +102,35 @@ function Navbar() {
 }
 
 export default Navbar;
+
+
+
+// import React from 'react';
+// import { Link } from 'react-scroll';
+
+// const Navbar = () => {
+//   return (
+//     <ul className='menu-list'>
+//       <li>
+//         <Link to="home" smooth={true} duration={500}>Home</Link>
+//       </li>
+//       <li>
+//         <Link to="about" smooth={true} duration={500}>About us</Link>
+//       </li>
+//       <li>
+//         <Link to="clients" smooth={true} duration={500}>Clients</Link>
+//       </li>
+//       <li>
+//         <Link to="parents" smooth={true} duration={500}>Parents</Link>
+//       </li>
+//       <li>
+//         <Link to="faqs" smooth={true} duration={500}>FAQs</Link>
+//       </li>
+//       <li>
+//         <Link to="contact" smooth={true} duration={500}>Contact</Link>
+//       </li>
+//     </ul>
+//   );
+// };
+
+// export default Navbar;

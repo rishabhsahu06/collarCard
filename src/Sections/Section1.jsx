@@ -3,13 +3,17 @@ import "./Section1.css";
 import Video from "../component/Video";
 
 function Section1() {
+
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
-    <>
+    <div id="home">
       <div className="container">
-      {/* <video className="video-bar" controls autoplay muted>
-  <source src={video} type="video/mp4" />
-</video> */}
-<Video/>
+        <Video />
 
         <div className="card">
           <h2 className="h2-collar">collarcard</h2>
@@ -24,11 +28,11 @@ function Section1() {
           <button className="btn">Request A Quote</button>
         </div>
 
-        <div className="arrow">
-          <i class="fa-solid fa-chevron-down"></i>
+        <div className="arrow" onClick={scrollToAbout}>
+          <i className="fa-solid fa-chevron-down"></i>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
