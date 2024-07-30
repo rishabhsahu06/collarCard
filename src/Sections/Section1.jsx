@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "./Section1.css";
-import Video from "../component/Video";
 
-function Section1() {
+function Section1({ posts, collarVideo }) {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  }, []); // Empty dependency array to run this effect only once
 
   const scrollToAbout = () => {
     const aboutSection = document.getElementById('about');
@@ -10,21 +16,26 @@ function Section1() {
       aboutSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  if (!posts || !posts.data || posts.data.length === 0) {
+    return <p>No data available</p>;
+  }
+
+  const post = posts.data[0]; 
+  const { Title, subTitle, paragraph } = post.attributes || {};
+
   return (
     <div id="home">
       <div className="container">
-        <Video />
+        <video className="video-bar" controls muted ref={videoRef} autoPlay>
+          <source src={collarVideo} type="sv.mp4" /> 
+          Some Error
+        </video>
 
         <div className="card">
-          <h2 className="h2-collar">collarcard</h2>
-          <h1>CollarCard</h1>
-          <p>
-            A CollarCard is a credit card sized plastic card
-            <br />
-            that contains four high quality pop-out collar stays
-            <br />
-            that is stored in a man’s wallet.
-          </p>
+          <h2 className="h2-collar text-7xl">{subTitle}</h2>
+          <h1>{Title}</h1>
+          <p>{paragraph}</p> 
           <button className="btn">Request A Quote</button>
         </div>
 

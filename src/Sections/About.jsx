@@ -1,31 +1,69 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./About.css";
-import artwork from "../assets/artwork.png";
 import email from "../assets/email.png";
 import card from "../assets/card.png";
-import back from "../assets/back.png"
 
 function About() {
+  const [postData, setPostData] = useState(null);
+
+  useEffect(() => {
+    const fetchPostData = async () => {
+      try {
+        const response = await fetch('http://localhost:1337/api/collar-blogs?populate=*');
+        const data = await response.json();
+        console.log('API Response:', data);
+
+        if (Array.isArray(data.data)) {
+          const post = data.data.find(item => item.id === 4);
+          if (post) {
+            console.log('Post Data:', post);
+            setPostData(post);
+          } else {
+            console.error('Post with id 2 not found.');
+          }
+        } else {
+          console.error('Unexpected API response format:', data);
+        }
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchPostData();
+  }, []);
+
+  if (!postData) {
+    return <p>Loading...</p>;
+  }
+
+  const {
+    Title: aboutTitle,
+    subTitle: aboutSubTitle,
+    paragraph: aboutPara,
+    order: aboutOrder,
+    orderSubtitle: aboutOrderSubtitle,
+    OT1: orderTable1,
+    OT2: orderTable2,
+    OT3: orderTable3,
+    OTimage,
+  } = postData.attributes;
+
+  // Ensure OTimage is defined and has the expected structure
+  if (!OTimage || !OTimage.data || !OTimage.data.attributes || !OTimage.data.attributes.url) {
+    console.error('OTimage data structure is invalid:', OTimage);
+    return null; // or handle error appropriately
+  }
+
   return (
-    < >
     <div id="about">
       <div className="about-container">
         <div className="head">
-          <h2>Know who we are</h2>
-          <h1>CollarCard</h1>
+          <h2>{aboutSubTitle}</h2>
+          <h1>{aboutTitle}</h1>
         </div>
 
         <div className="para-about">
-          <p>
-            A CollarCard is a credit card sized plastic card that contains four
-            high quality pop-out collar stays that is <br /> stored in a man’s
-            wallet. We invented CollarCards to address and fix the common
-            problem of men forgetting <br /> their collar stays when they leave
-            the house, when they are traveling, or for any occasion when they
-            are <br /> wearing a dress shirt. CollarCards are a great
-            promotional product for any company – we have a 100% usage <br />{" "}
-            rate and can put any brand in a man’s wallet.
-          </p>
+          <p>{aboutPara}</p>
         </div>
 
         <div className="about-card">
@@ -33,7 +71,7 @@ function About() {
             <ul>
               <li>
                 <span>
-                  <i class="fa-solid fa-chevron-right"></i>
+                  <i className="fa-solid fa-chevron-right"></i>
                 </span>
                 CollarCards are one of the most unique and <br /> effective
                 promotional products in the <br /> marketplace for men.
@@ -41,14 +79,14 @@ function About() {
 
               <li>
                 <span></span>
-                <i class="fa-solid fa-chevron-right"></i>
+                <i className="fa-solid fa-chevron-right"></i>
                 CollarCards have a nearly 100% usage rate – <br /> which means
                 we can put your brand in a man’s <br /> wallet 24 hours a day.
               </li>
 
               <li>
                 <span>
-                  <i class="fa-solid fa-chevron-right"></i>
+                  <i className="fa-solid fa-chevron-right"></i>
                 </span>
                 Our low price point makes CollarCards one of <br /> the most
                 cost-effective promotional products <br /> on the market.
@@ -60,7 +98,7 @@ function About() {
             <ul>
               <li>
                 <span>
-                  <i class="fa-solid fa-chevron-right"></i>
+                  <i className="fa-solid fa-chevron-right"></i>
                 </span>
                 CollarCards are one of the most unique and <br /> effective
                 promotional products in the <br /> marketplace for men.
@@ -68,7 +106,7 @@ function About() {
 
               <li>
                 <span>
-                  <i class="fa-solid fa-chevron-right"></i>
+                  <i className="fa-solid fa-chevron-right"></i>
                 </span>
                 CollarCards have a nearly 100% usage rate – <br /> which means
                 we can put your brand in a man’s <br /> wallet 24 hours a day.
@@ -76,7 +114,7 @@ function About() {
 
               <li>
                 <span>
-                  <i class="fa-solid fa-chevron-right"></i>
+                  <i className="fa-solid fa-chevron-right"></i>
                 </span>
                 Our low price point makes CollarCards one of <br /> the most
                 cost-effective promotional products <br /> on the market.
@@ -88,48 +126,28 @@ function About() {
 
       <div className="ordering">
         <div className="head">
-          <h2>Know how to order</h2>
-          <h1>Ordering is Simple</h1>
+          <h2>{aboutOrder}</h2>
+          <h1>{aboutOrderSubtitle}</h1>
         </div>
 
         <div className="ordering-card-container">
           <div className="ordering-card">
-            <img src={artwork} alt="" />
-            <p>
-              Send us your high-resolution artwork for the front of your
-              CollarCard and the text you would like printed on the back of each
-              collar stay on your CollarCard (email, website, and/or phone
-              number.)
-            </p>
+            <img src={`http://localhost:1337${OTimage.data.attributes.url}`} alt="OTimage" />
+            <p>{orderTable1}</p>
           </div>
 
           <div className="ordering-card">
-            <img src={card} alt="" />
-            <p>
-              We will promptly create proofs <br /> and email them to you for
-              your <br /> approval.
-            </p>
+            <img src={card} alt="Card" />
+            <p>{orderTable2}</p>
           </div>
 
           <div className="ordering-card">
-            <img src={email} alt="" />
-            <p>
-              Once you approve and send <br /> payment, we will start to <br /> produce your
-              order. Our typical <br /> turnaround time is very fast– <br /> usually only two
-              weeks from <br /> the date of your order.
-            </p>
+            <img src={email} alt="Email" />
+            <p>{orderTable3}</p>
           </div>
         </div>
       </div>
-
-
-
-{/* compare-container */}
-
-      
-</div>
-      
-    </>
+    </div>
   );
 }
 

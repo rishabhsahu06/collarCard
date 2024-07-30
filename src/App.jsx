@@ -10,32 +10,40 @@ import Contact from "./Sections/Contact";
 import Footer from "./component/Footer";
 import Testimonial from "./Sections/Testimonial";
 import CollarCard from "./Sections/CollarCard";
+import useFetch from "./hooks/UseFetch";
 
-function App() {
+export default function App() {
+  const { loading, error, data } = useFetch(
+    "http://localhost:1337/api/Collar-Blogs?populate=*"
+  );
+  console.log(data);
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
+
   return (
     <Router>
       <>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Section1 />} />
-          <Route path="/about" element={<About />} />
+          {/* Use render props to pass props to Section1 */}
+          <Route path="/" element={<Section1 posts={data} />} />
+          <Route path="/about" element={<About posts={data} />} />
           <Route path="/clients" element={<Client />} />
           <Route path="/patents" element={<Patent />} />
           <Route path="/faq" element={<FAQComponent />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
 
-        <About/>
-        <Patent/>
-        <FAQComponent/>
-        <Client/>
+        {/* Render other components outside of Routes */}
+        <About posts={data} />
+        <Patent />
+        <FAQComponent />
+        <Client />
         <Testimonial />
-        <Contact/>
+        <Contact />
         <CollarCard />
         <Footer />
       </>
     </Router>
   );
 }
-
-export default App;

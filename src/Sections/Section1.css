@@ -16,19 +16,18 @@
 .h2-collar {
   color: rgba(0, 0, 0, 0.1);
   font-family: "Open Sans", Sans-serif;
-  font-size: 69px;
-  font-weight: 700; 
+  font-weight: normal; 
   letter-spacing: 0.5px;
+
   margin-top: 40px;
 }
 
 .card h1 {
   color: #0066ff;
-  font-family: "Open Sans", Sans-serif;
-  font-size: 56px;
-  font-weight: 700; 
-  letter-spacing: 0.5px; 
-  margin-top: -55px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-top:45px;
 }
 
 .card p {
